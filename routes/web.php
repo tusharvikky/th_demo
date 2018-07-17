@@ -23,7 +23,8 @@ $router->get('/', function () use ($router) {
 // Should be in Controller, but since we only have two functions,
 // building a controller seems to be an overkill.
 $router->get('insert', function() use ($router) { // Should be a post request
-	dd(DBLog::where('v_id', 1)->get());
+
+	// Create a queue just to insert rows into the DB.
 });
 
 $router->get('query', function () use ($router) { 
